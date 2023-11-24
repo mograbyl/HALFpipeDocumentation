@@ -36,3 +36,28 @@ Singularity          2.x        sudo apt install singularity-container
 Docker                          see https://docs.docker.com/engine/install 
 ==================== ========== ================================================================
 
+Singularity version 3.x creates a container image file called HALFpipe_{version}.sif in the directory where you run the pull command. For Singularity version 2.x the file is named halfpipe-halfpipe-master-latest.simg. Whenever you want to use the container, you need pass Singularity the path to this file.
+
+NOTE: Singularity may store a copy of the container in its cache directory. The cache directory is located by default in your home directory at ~/.singularity. If you need to save disk space in your home directory, you can safely delete the cache directory after downloading, i.e. by running rm -rf ~/.singularity. Alternatively, you could move the cache directory somewhere with more free disk space using a symlink. This way, files will automatically be stored there in the future. For example, if you have a lot of free disk space in /mnt/storage, then you could first run mv ~/.singularity /mnt/storage to move the cache directory, and then ln -s /mnt/storage/.singularity ~/.singularity to create the symlink.
+
+Docker will store the container in its storage base directory, so it does not matter from which directory you run the pull command.
+
+**Quality control (QC)**
+--------------------------
+
+After running the pipeline, an output folder will be created. If the pipeline ran successfully, your output folder should look like this:
+
+**/Output** 
+**|_reports** → this contains all the QC information 
+**|_derivatives** → this contains the extracted features for each subject (from the CorrMatrix, DualReg, fALFF, ReHo, SeedCorr analyses), along with the confound file (confounds.tsv), the preprocessed image(s) (preproc.nii.gz) and the mask_file.nii.gz 
+**|_nypipe**  → this contains the intermediate pre-processing files. When using the standard pipeline, not all intermediate images are saved to save space. However you can choose to save everything by changing the flag: --keep (more information can be found on GitHub 
+**|_rawdata** → this folder contains the raw T1 images and epi in BIDS
+**|_log.txt**
+**|_err.txt**  
+**_halfpipe.log.txt**
+**|_spec.json**
+|_ an execgraph and workflow file (you can ignore this)
+|_possibly files starting with ‘crash’
+
+
+
