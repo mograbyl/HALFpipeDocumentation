@@ -59,5 +59,12 @@ After running the pipeline, an output folder will be created. If the pipeline ra
 |_ an execgraph and workflow file (you can ignore this)
 |_possibly files starting with ‘crash’
 
+The files important for **QC** are in the **reports** folder. This contains:
+
+* The web file **index.html**, which is the main web page that you will use to perform quality control (see below)
+* **reportvals.txt** → this is a group file that contains the mean of the quality metrics (aroma_noise_frac, the fd_gt_0_5, mean_fd, mean_gm_tsnr) for each subject
+* **reportpreproc.txt** → this is a group file that reports the status of the pre-processing (done/missing) of the resting state image for each subject
+* In the reports folder there are also individual subject folders (that contain the images used to create the index.html and other files .js and .json.lock. You don’t have to worry about these files.
+
 
 
