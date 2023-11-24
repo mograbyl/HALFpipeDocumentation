@@ -74,5 +74,24 @@ Important files for troubleshooting:
 * The **err.txt file** contains the record of the errors
 * The **crash files** might contain information about processes that crashed. If you submit an issue on GitHub, please include this file.
 
+**A. Steps for quality checking**
+------------------------------
+**Open the summary report in the reports folder**
+_______________________________________________________________
 
+The summary report (**reportpreproc.txt** in the reports folder) should look something like this:
+
+======= ==== ======
+subject task status
+======= ==== ======
+1       rest done
+------- ---- ------
+2       rest missing
+------- ---- ------
+3       rest missing
+------- ---- ------
+4       rest done
+======= ==== ======
+
+**Done** means that all the output files of interest (i.e., preprocessed image, confound files, connectivity matrices, ICA maps, seed connectivity maps, alff, reho) for that subject were created. These derivative files can be found in the folder <path/to/output/derivatives/halfpipe/subjectfolder>. 
 
