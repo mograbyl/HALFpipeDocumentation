@@ -110,3 +110,10 @@ Step 1.1.1: Re-run missing or failed subjects
 * Re-run HALFpipe as before, but add the option --subject-list <full path to text file> to the end of the command.
 * *Only if running on HPC*: Edit your submission script to add the option, and then submit the job to the HPC queue. 
 
+If you are unable to troubleshoot, please open an issue on `GitHub <https://github.com/mindandbrain/Halfpipe#6-troubleshooting>`_.
+
+**Step 2: Open the index.html page**
+---------------------------------
+Open the **index.html** file in the reports folder in your favourite browser. You can navigate through different windows by clicking on the drop-down menu (the three lines in the top left corner next to Nypipe status, see image below): charts, explore reports and report detail view. 
+
+**NOTE**: As you make them, the ratings are saved in the browser's local storage, and they will stay there unless you delete the cookies/site data. To review the ratings you made, open the index.html file from the same local machine using the same browser.
