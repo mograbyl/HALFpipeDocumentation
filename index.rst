@@ -66,5 +66,12 @@ The files important for **QC** are in the **reports** folder. This contains:
 * **reportpreproc.txt** → this is a group file that reports the status of the pre-processing (done/missing) of the resting state image for each subject
 * In the reports folder there are also individual subject folders (that contain the images used to create the index.html and other files .js and .json.lock. You don’t have to worry about these files.
 
+**Note:** you can copy the QC folder (reports) anywhere (e.g., on a local machine) as long as you copy the entire reports folder. The reports folder will take ~10 MB of space per subject plus 10 MB for each functional image. So if each subject has just the resting state, it would take ~20 MB per subject.
+
+Important files for troubleshooting:
+
+** The *log.txt** file contains the record of all the steps performed by the pipeline when it was running. Checking the log will help you troubleshoot if you run into any problems.
+** The *err.txt file** contains the record of the errors
+** The *crash files** might contain information about processes that crashed. If you submit an issue on GitHub, please include this file.
 
 
