@@ -95,3 +95,18 @@ subject task status
 
 **Done** means that all the output files of interest (i.e., preprocessed image, confound files, connectivity matrices, ICA maps, seed connectivity maps, alff, reho) for that subject were created. These derivative files can be found in the folder <path/to/output/derivatives/halfpipe/subjectfolder>. 
 
+Conversely, subjects with the status ‘missing’ did not run completely. This means that not all the output files were created.
+
+Step 1.1: Check for missing files in the summary report
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+*If you don’t have any subject listed under missing, continue to* **step 2.**
+
+*If you have any subject listed under missing*, please have a look at the log.txt file (located in the main output folder). To open the log file, you can use any text editor. Use the search function to search for ‘error’, to understand if something and what went wrong. Common errors are listed in the 'troubleshooting section' at the end of this document and on `GitHub <https://github.com/mindandbrain/Halfpipe#6-troubleshooting>`_. 
+
+Step 1.1.1: Re-run missing or failed subjects
+""""""""""""""""""""""""""""""""""""""""""""""
+* If there are any missing subjects, make a text file with all the missing subject IDs, one on each line. These could also be new participants that have not yet been processed.
+* Re-run HALFpipe as before, but add the option --subject-list <full path to text file> to the end of the command.
+* *Only if running on HPC*: Edit your submission script to add the option, and then submit the job to the HPC queue. 
+
