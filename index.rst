@@ -70,8 +70,8 @@ The files important for **QC** are in the **reports** folder. This contains:
 
 Important files for troubleshooting:
 
-** The *log.txt** file contains the record of all the steps performed by the pipeline when it was running. Checking the log will help you troubleshoot if you run into any problems.
-** The *err.txt file** contains the record of the errors
-** The *crash files** might contain information about processes that crashed. If you submit an issue on GitHub, please include this file.
+* The **log.txt** file contains the record of all the steps performed by the pipeline when it was running. Checking the log will help you troubleshoot if you run into any problems.
+* The **err.txt file** contains the record of the errors
+* The **crash files** might contain information about processes that crashed. If you submit an issue on GitHub, please include this file.
 
 
